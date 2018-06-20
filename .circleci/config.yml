@@ -28,5 +28,4 @@ jobs:
       - run:
           name: run tests
           command: |
-            #export PIPENV_VENV_IN_PROJECT=~/repo
             pipenv run python fizzbuzz.py
