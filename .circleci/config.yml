@@ -1,14 +1,9 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
       - image: circleci/python:3.6.1
-    working_directory: ~/repo
-
+    working_directory: ~/hello-circleci-with-pipenv
     steps:
       - checkout
       - restore_cache:
@@ -18,7 +13,7 @@ jobs:
           name: install dependencies
           command: |
             sudo pip install pipenv
-            export PIPENV_VENV_IN_PROJECT=~/repo
+            export PIPENV_VENV_IN_PROJECT=~/hello-circleci-with-pipenv
             pipenv install
             ls -al
       - save_cache:
