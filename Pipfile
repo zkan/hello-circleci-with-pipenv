@@ -9,6 +9,7 @@ name = "pypi"
 
 faker = "*"
 django = "*"
+"flake8" = "*"
 
 
 [dev-packages]
